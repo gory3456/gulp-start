@@ -1,5 +1,7 @@
 .main-nav {
+	#{mn}: ".main-nav";
 	background-color: #fff;
+	z-index:100;
 
 	&__container {
 		display: flex;
@@ -13,6 +15,10 @@
 			padding-top: 77px;
 		}
 	}
+	&__contacts {
+		display: none;
+		margin-top: auto;
+	}
 
 	&__logo {
 		display: block;
@@ -25,8 +31,24 @@
 
 		@media (max-width: 767px) {
 			display: none;
+		}		
+	}
+	&__menu {
+		display: none;
+		&--showed {
+			display: block;
 		}
-		
+	}
+	&__close {
+		@include clear-button;
+
+		display: none;
+		position: absolute;
+		top: 24px;
+		right: 10px;
+		height: 12px;
+		width: 12px;
+
 	}
 	&__item {
 		text-transform: uppercase;
