@@ -7,8 +7,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding-top: 15px;
 		
-		@media(min-width: 767px) {
+		@media (min-width: 768px) {
 			padding-top: 28px;
 		}
 		@media (min-width: 1728px) {
@@ -21,7 +22,15 @@
 	}
 
 	&__logo {
-		display: block;
+		img {
+			display: block;
+			width: 74px;
+			height: 25px;
+			@media (min-width: 768px) {
+				width: 94px;
+				height:32px;
+			}
+		}
 	}
 	&__list {
 		@include clear-list;
@@ -35,8 +44,25 @@
 	}
 	&__menu {
 		display: none;
-		&--showed {
+
+		@media (min-width: 768px) {{
 			display: block;
+		}
+		&--showed {
+			@media (max-width: 767px) {
+				display: flex;
+				flex-direction: column;
+				padding: 15px 10px 20px 20px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 100;
+				width: 50%;
+				height: 100vh;
+				background-color: #EBEBEB;
+				box-shadow: ;
+			}
+			
 		}
 	}
 	&__close {
