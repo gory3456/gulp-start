@@ -8,35 +8,56 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<nav class="main-nav">
+	<header class="main-nav">
 		<div class="container main-nav__container">
 			<a class="main-nav__logo">
 				<img src="img/slick-logo.svg" alt="Логотип компании Slick">
 			</a>
 
-			<ul class="main-nav__list">
-				<li class="main-nav__item">
-					<a href="#">Главная</a>
-				</li>
-				<li class="main-nav__item">
-					<a href="#">Магазин</a>
-				</li>
-				<li class="main-nav__item">
-					<a href="#">Контакты</a>
-				</li>
-			</ul>
+			<nav class="main-nav__menu main-nav__menu--showed">
+				<button class="main-nav__button main-nav__button--close">
+					<img src="img/close.svg" alt="закрыть меню">
+				</button>
+				<ul class="main-nav__list">
+					<li class="main-nav__item">
+						<a href="#">Главная</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#">Магазин</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="main-nav__contacts">
+					<p>Следи за нами<br>в социальных сетях:</p>
+					<ul class="main-nav__social">
+						<li class="main-nav__social-item">
+							<a href="#">
+								<img src="img/icon-tg.svg" alt="telegram">
+							</a>
+						</li>
+						<li class="main-nav__social-item">
+							<a href="#">
+								<img src="img/icon-vk.svg" alt="vk">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 			<div class="main-nav__buttons">
-				<button class="main-nav__button main-nav__button-search">
+				<button class="main-nav__button main-nav__button--search">
 					<img src="img/find.svg" alt="Иконка поиска">
 				</button>
-				<button class=" main-nav__button main-nav__button-purchases">
+				<button class="main-nav__button main-nav__button--purchases">
+					<span class="main-nav__pin">100</span>
 					<img src="img/shop.svg" alt="Иконка корзины">
 				</button>
-				<button class="main-nav__button main-nav__burger">
+				<button class="main-nav__button main-nav__button--burger">
 					<img src="img/burger-button.svg" alt="Иконка бургер">
 				</button>
 			</div>
 		</div>
-	</nav>
+	</header>
 </body>
 </html>
