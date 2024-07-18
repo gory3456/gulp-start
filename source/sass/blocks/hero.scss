@@ -4,12 +4,12 @@
 		@media (min-width: 1728px) {
 			display: flex;
 			justify-content: space-between;
+			position: relative;
 		}
 	}
 
 	&__text {
-		margin-top: 42px;
-		margin-bottom: 54px;
+		margin: 42px auto 54px auto;
 		display: block;
 		color: #000;
 
@@ -18,43 +18,52 @@
 		}
 
 		@media (min-width: 768px) {
-			text-align: center;
-			width: 730px;
 			margin-top: 60px;
 			margin-bottom: 72px;
+			width: 729px;
+			height: 423px;
+			
 		}
 
 		@media (min-width: 1728px) {
 			text-align: start;
-			margin-top: 226px;
-			
+			margin-top: 226px;	
+			width: auto;
+			height: auto;		
 		}
 	}
 
 	&__desc {
+		text-transform: capitalize;
+		color: #000;
 		font-size: 15px;
 		line-height: 23px;
 		font-weight: 400;
 		margin: 20px 0;
+		text-align: start;
 
 		@media (min-width: 768px) {
 			font-size: 20px;
 			line-height: 30px;
 			position: absolute;
-			left: 342px;
+			left: 45vw;
 			top: 300px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		@media (min-width: 1728px) {
 			font-size: 28px;
 			line-height: 46px;
 			margin-top: 78px;
-
+			position: static;
 		}
 	}
 
 	&__slogans {
-		@include clear-list;	
+		@include clear-list;
+		
+		
 	}
 	&__slogan {
 		text-align: start;
@@ -113,10 +122,10 @@
 
 		@media (max-width: 767px) {
 			height: 55px;
-			width: 100%;
+			width: 100vw;
 			font-size: 20px;
 			line-height: 30px;
-			position: absolute;
+			text-align: center;
 		}
 
 		@media (min-width: 768px) {
@@ -141,43 +150,85 @@
 	}
 
 	&__item {
-		background:no-repeat url("../img/hero__item.svg"),no-repeat linear-gradient(180deg, #E4E4E4, #FAFAFA);
-		background-size: 100% auto;
+		background: no-repeat url('../../img/ultimate.svg'),no-repeat linear-gradient(180deg, #E4E4E4, #FAFAFA);
+		text-align: center;
+		background-size: 100%;
 		display: flex;
 		padding-top: 41px;
 		flex-direction: column;
 		text-align: center;
 		align-items: center;
 		font-weight: 500;
-		padding-bottom: 40px;
+		padding-bottom: 32px;
+		margin-left: -10px;
+		margin-right: -10px;
+		width: 100vw;
 
 		@media (min-width: 768px) {
 			padding-top: 67px;
+			margin-left: -20px;
+			margin-right: -20px;
 		}
-		
+
+		@media (min-width: 1728px) {
+			padding-top: 202px;
+			padding-bottom: 131px;
+			background: transparent;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				top: -132px;
+				left: 44%;
+				width: calc(50vw + 7%);
+				background-image:
+				linear-gradient(90deg, #E4E4E4 0%, #FAFAFA 100%);
+				background-repeat: no-repeat;
+				
+				z-index: 1;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: calc(50vw + 7%);
+				bottom: 0;
+				top: -100px;
+				left: 44%;
+				background-image:
+				url("../../img/ultimate-vertical.svg");
+				background-repeat: no-repeat;
+				z-index: 1;
+			}
+		}
 	}
 
 	&__item-image {
 		display: block;
 		width: 296px;
 		z-index: 2;
+		position: relative;
 
 		@media (min-width: 768px) {
             width: 504px;
             height: 305px;
+			
         }
 
         @media (min-width: 1728px) {
             width: 783px;
             height: 474px;
+		
         }
 	}
 	&__item-title {
+		z-index: 2;
+		position: relative;
         margin-top: 55px;
         font-size: 24px;
         line-height: 22px;
         color: #000;
-        z-index: 2;
 
         @media (min-width: 768px) {
             font-size: 38px;
@@ -186,6 +237,8 @@
         }
     }
 	&__item-price {
+		z-index: 2;
+		position: relative;
         font-size: 20px;
         line-height: 18px;
         margin-top: 11px;
