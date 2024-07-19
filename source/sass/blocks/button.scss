@@ -1,21 +1,21 @@
 .button {
-	@include clear-button;
+    @include clear-button;
 
-	text-align: center;
-	line-height: 1.5;
-	width: 100%;
-	font-weight: 600;
-	font-size: 20px;
-	color: #fff;
-	background-color: #000;
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
 
-	@media (min-width: 768px) {
-		font-size: 28px;
-	}
+    @media (min-width: 768px) {
+        font-size: 28px;
+    }
 
 
 }
 .button:hover {
-	opacity: 0.8;
-	box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    opacity: 0.8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
 }
