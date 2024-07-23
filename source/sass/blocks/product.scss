@@ -260,6 +260,7 @@
             position: absolute;
             font-size: 36px;
             line-height: 60px;
+            font-weight: 500;
             text-align: center;
             left: -10px;
             top: 51px;
@@ -270,9 +271,16 @@
             &::after {
                 background-image: url('../img/hot-icon.svg');
                 content: 'Hot!';
+                @media (max-width: 768px) {
+                    width:59px;
+                    height:32px;
+                    font-size: 18px;
+                    line-height: 36px;
+                    text-align: center;
+                }
             }
         }
-
+        
         &--new {
             &::after {
                 background-image: url('../img/new-icon.svg');
@@ -281,16 +289,17 @@
                 top: 51px;
                 left: -10px;
                 font-size: 18px;
-                line-height: 1.5;
+                line-height: 36px;
                 position: absolute;
                 width: 60px;
                 height: 32px;
+                font-weight: 500;
                 text-align: center;
+                filter: drop-shadow(8px 7px 16.1px rgba(0, 0, 0, .2509803922));
                 
             }
         }
         &--
-
         &--big {
             &::after {
                 
