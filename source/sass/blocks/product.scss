@@ -1,135 +1,180 @@
 .product {
-	$bl: &;
+    $bl: &;
 
-	width: 300px;
-	padding: 0 19px;
-	padding-top: 38px;
-	padding-bottom: 23px;
-	border: 2px solid #DEDEDE;
-	border-radius: 25px;
-	border-color: #DEDEDE;
-	color: #000;
-	margin-bottom: 25px;
-	position: relative;
+    width: 300px;
+    padding: 0 19px;
+    padding-top: 38px;
+    padding-bottom: 23px;
+    border: 2px solid #DEDEDE;
+    border-radius: 25px;
+    border-color: #DEDEDE;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-	@media (min-width: 768px) {
-		width: 344px;
-		padding: 0 30px;
-		padding-top: 38px;
-		padding-bottom: 22px;
-		margin-bottom: 0;
-	}
+    @media (min-width: 768px) {
+        width: 344px;
+        padding: 0 30px;
+        padding-top: 38px;
+        padding-bottom: 22px;
+        margin-bottom: 0;
+    }
 
-	@media (min-width: 1728px) {
-		width: 488px;
-		padding: 0 40px;
-		padding-top: 26px;
-		padding-bottom: 25px;
-	}
-	&--big {
-		width: 100%;
-		padding: 0 51px;
-		padding-top: 60px;
-		padding-bottom: 52px;
-		border: 2px solid #DEDEDE;
-		border-radius: 25px;
-		color: #000;
-		position: relative;
+    @media (min-width: 1728px) {
+        width: 488px;
+        padding: 0 40px;
+        padding-top: 26px;
+        padding-bottom: 25px;
+    }
+    &--big {
+        width: 100%;
+        padding: 60px 51px 52px;
+        border: 2px solid #DEDEDE;
+        border-radius: 25px;
+        color: #000;
+        position: relative;
 
-		#{$bl}__image {
-			margin: 0 78px;
-			width: 470px;
-			height: 470px;
-		}
+        @media (max-width: 768px) {
+            padding: 38px 19px 23px;
+        }
 
-		#{$bl}__title {
-			text-align: center;
-			font-size: 62px;
-			margin: 0;
-			margin-top: -30px;
-			margin-bottom: 41px;
-		}
+        #{$bl}__image {
+            display: block;
+            margin: 0 78px;
+            width: 470px;
+            height: 470px;
 
-		#{$bl}__price {
+            @media (max-width: 768px) {
+                width: 212px;
+                height: 212px;
+                position: static;
+                margin: 0 25px;
+            }
+        }
 
-			#{$bl}__price--new {
-				font-size: 48px;
-				margin-right: 68px;
-			}
+        #{$bl}__title {
+            text-align: center;
+            font-size: 64px;
+            margin: 0;
+            margin-top: -30px;
+            margin-bottom: 41px;
 
-			#{$bl}__price--old {
-				text-decoration: line-through;
-				font-size: 24px;
-			}
-		}
+            @media (max-width: 768px) {
+                font-size: 24px;
+                text-align: left;
 
-		#{$bl}__circle {
-			width: 65px;
-			height: 65px;
-			background-color: #000;
-			border-radius: 50%;
-			position: absolute;
-			bottom: 53px;
-			right: 40px;
-		}
+            }
+        }
 
-		#{$bl}__arrow {
-			width: 24px;
-			height: 24px;
-			position: absolute;
-			bottom: 73px;
-			right: 60px;
-		}
+        #{$bl}__price {
 
-		@media (min-width: 1728px) {
-			width: 100%;
-			padding: 0 80px;
-			padding-top: 98px;
-			padding-bottom: 23px;
-			grid-column: span 2;
-			grid-row: span 2;
+            #{$bl}__price--new {
+                font-size: 48px;
+                margin-right: 68px;
+                @media (max-width: 768px) {
+                    font-size: 24px;
+                    margin-right: 20px;
+                }
+            }
 
-			#{$bl}__image {
-				margin: 0 60px;
-				width: 762px;
-				height: 762px;
-			}
+            #{$bl}__price--old {
+                text-decoration: line-through;
+                font-size: 24px;
 
-			#{$bl}__title {
-				text-align: start;
-				font-size: 64px;
-				margin-top: -40px;
-				margin-bottom: 21px;
-			}
+                @media (max-width: 768px){
+                    font-size: 18px;
+                }
+            }
+        }
 
-			#{$bl}__price {
+        #{$bl}__circle {
+            width: 65px;
+            height: 65px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 53px;
+            right: 40px;
 
-				#{$bl}__price--new {
-					margin-right: 44px;
-				}
-			}
+            @media (max-width: 768px) {
+                width: 38px;
+                height: 38px;
+                right: 20px;
+                bottom: 25px;
+            }
+        }
 
-			#{$bl}__circle {
-				width: 118px;
-				height: 118px;
-				bottom: 68px;
-				right: 82px;
-			}
+        #{$bl}__arrow {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            bottom: 73px;
+            right: 60px;
 
-			#{$bl}__arrow {
-				width: 43px;
-				height: 43px;
-				position: absolute;
-				bottom: 105px;
-				right: 120px;
-			}
-		}
-	}
-	&__image {
+            @media (max-width: 768px) {
+                width: 14px;
+                height: 14px;
+                bottom: 37px;
+                right: 32px;
+            }
+        }
+
+        @media (min-width: 1728px) {
+            width: 100%;
+            padding: 0 80px;
+            padding-top: 98px;
+            padding-bottom: 23px;
+            grid-column: span 2;
+            grid-row: span 2;
+
+            #{$bl}__image {
+                display: block;
+                margin: 0 60px;
+                width: 762px;
+                height: 762px;
+            }
+
+            #{$bl}__title {
+                text-align: start;
+                font-size: 64px;
+                margin-top: -40px;
+                margin-bottom: 21px;
+            }
+
+            #{$bl}__price {
+
+                #{$bl}__price--new {
+                    margin-right: 44px;
+                }
+            }
+
+            #{$bl}__circle {
+                width: 118px;
+                height: 118px;
+                bottom: 68px;
+                right: 82px;
+            }
+
+            #{$bl}__arrow {
+                width: 43px;
+                height: 43px;
+                position: absolute;
+                bottom: 105px;
+                right: 120px;
+            }
+        }
+    }
+    &__image {
         margin: 0 25px;
         width: 212px;
         height: 212px;
@@ -220,14 +265,14 @@
 
         &--hot {
             &::after {
-                background-image: url(../img/hot-icon.svg);
+                background-image: url(../../img/hot-icon.svg);
                 content: 'Hot!';
             }
         }
 
         &--new {
             &::after {
-                background-image: url(../img/new-icon.svg);
+                background-image: url(../../img/new-icon.svg);
                 content: 'New';
             }
         }
@@ -244,5 +289,5 @@
         }
     }
 }
-	
-	
+    
+    
