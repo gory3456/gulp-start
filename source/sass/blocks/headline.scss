@@ -1,0 +1,38 @@
+.headline {
+    font-size: 32px;
+    margin: 38px 0 0;
+    color: #000;
+    font-weight: 500;
+
+    &::after,
+    &::before {
+        content: '';
+        width: 41px;
+        height: 3px;
+        background-color: #000;
+        display: inline-block;
+        vertical-align: middle;
+        transform: translateY(-2px);
+    }
+
+    &::after {
+        margin-left: 10px;
+    }
+
+    &::before {
+        margin-right: 10px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 45px;
+        margin: 124px 0 0;
+
+        &::after {
+            margin-left: 20px;
+        }
+
+        &::before {
+            margin-right: 20px;
+        }
+    }
+}
