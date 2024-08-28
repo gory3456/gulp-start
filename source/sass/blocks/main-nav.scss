@@ -1,4 +1,6 @@
 .main-nav {
+	$mn: '.main-nav';
+
     &__container {
         display: flex;
         align-items: center;
@@ -79,16 +81,12 @@
     &__menu {
         display: none;
 
-        @media (min-width: 768px) {
-            display: block;
-            z-index: 2;
-        }
         &--showed {
             @media (max-width: 767px) {
                 display: flex;
                 flex-direction: column;
                 padding: 15px 10px 20px 20px;
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: 0;
                 z-index: 100;
@@ -96,6 +94,12 @@
                 height: 100vh;
                 background-color: #EBEBEB;
                 box-shadow: 0 47px 40px 0 rgba(0, 0, 0, 0.07);
+				z-index: 3;
+		
+				#{$mn}__button--close {
+					display: block;
+				}
+		
             }
             
         }
@@ -148,6 +152,14 @@
         position: relative;
         z-index: 101;
 
+        &--showed {
+            position: fixed;
+            top: 17px;
+            right: 57px;
+            z-index: 101;
+			
+        }
+
         @media (min-width: 768px) {
             gap: 44px;
         }
@@ -174,11 +186,6 @@
             right: 17px;
             height: 12px;
             width: 12px;
-        }
-        &--burger {
-            @media (min-width: 768px) {
-                display: none;
-            }	
         }
     }
     &__pin {

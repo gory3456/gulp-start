@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+    <div class="slick-notification">
+        <div class="slick-notification__active">
+            <button class="slick-notification__close">
+                <img class="slick-notification__image" src="img/close.svg" alt="Закрыть уведомление">
+            </button>
+            <p class="slick-notification__text">Товар успешно<br> добавлен в корзину</p>
+            <button class="slick-notification__accept button">Продолжить покупки</button>
+            <div class="slick-notification__window"></div>
+        </div>
+    </div>
     <header class="main-nav">
         <div class="container main-nav__container">
             <a class="main-nav__logo">
                 <img src="img/slick-logo.svg" alt="Логотип компании Slick">
             </a>
-            <nav class="main-nav__menu ">
-                <!-- main-nav__menu--showed -->
+            <nav class="main-nav__menu">
+                <!-- main-nav__menu--showed открыть меню -->
                 <button class="main-nav__button main-nav__button--close">
                     <img src="img/close.svg" alt="закрыть меню">
                 </button>
@@ -46,6 +56,7 @@
                 </div>
             </nav>
             <div class="main-nav__buttons">
+                <!-- main-nav__buttons--showed добавляет position: fixed на кнопки search/purchases-->
                 <button class="main-nav__button main-nav__button--search">
                     <img src="img/find.svg" alt="Иконка поиска">
                 </button>
@@ -53,7 +64,7 @@
                     <span class="main-nav__pin">100</span>
                     <img src="img/shop.svg" alt="Иконка корзины">
                 </button>
-                <button class="main-nav__button main-nav__button--burger">
+                <button class="main-nav__button burger-button burger-button--showed">
                     <img src="img/burger-button.svg" alt="Иконка бургер">
                 </button>
             </div>
@@ -118,8 +129,10 @@
                             <span class="product__price product__price--new">2 999 ₽ </span>
                             <span class="product__price product__price--old">4999 ₽</span>
                         </div>
-                        <div class="product__circle"></div>
-                        <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon.">
+                        <div class="product__button">
+                            <div class="product__circle"></div>
+                            <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon">
+                        </div>
                     </div>
                     <div class="best-selling__item product product--new">
                         <img class="product__image" src="img/slick-sneaker-shoe.png" alt="slick-sneaker-shoe">
@@ -128,8 +141,10 @@
                             <span class="product__price product__price--new">2 999 ₽ </span>
                             <span class="product__price product__price--old">3999 ₽</span>
                         </div>
-                        <div class="product__circle"></div>
-                        <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon">
+                        <div class="product__button">
+                            <div class="product__circle"></div>
+                            <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon">
+                        </div>
                     </div>
                     <div class="best-selling__item product">
                         <img class="product__image" src="img/slick-canvas-shoe.png" alt="slick-canvas-shoe">
@@ -139,8 +154,10 @@
                                 <span class="product__price product__price--new">2 999 ₽ </span>
                                 <span class="product__price product__price--old">3999 ₽</span>
                             </div>
-                            <div class="product__circle"></div>
-                            <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon.">
+                            <div class="product__button">
+                                <div class="product__circle"></div>
+                                <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon.">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,5 +165,6 @@
             </div>
         </section>
     </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
