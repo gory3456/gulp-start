@@ -61,13 +61,40 @@
                     <img src="img/find.svg" alt="Иконка поиска">
                 </button>
                 <button class="main-nav__button main-nav__button--purchases">
-                    <span class="main-nav__pin">100</span>
+                    <span class="main-nav__pin">0</span>
                     <img src="img/shop.svg" alt="Иконка корзины">
                 </button>
-                <button class="main-nav__button burger-button burger-button--showed">
-                    <img src="img/burger-button.svg" alt="Иконка бургер">
-                </button>
+                <div class="shopping-cart"> <!-- shopping-cart--active -->
+                    <button class="shopping-cart__close">
+                        <img class="" src="img/close.svg" alt="Закрыть">
+                    </button>
+                    <div class="shopping-cart__body">
+                        <span class="shopping-cart__title">Корзина Товаров</span>
+                        <template class="shopping-cart__product">
+                            <li class="shopping-cart__item">
+                                <div class="shopping-cart__sneaker-info">
+                                    <img class="shopping-cart__image" src="img/gray_running_sport_shoe.png" alt="серые_беговые_кроссовки">
+                                    <span class="shopping-cart__name">Running sport shoe</span>
+                                </div>
+                                <div class="shopping-cart__sneaker-total">
+                                    <span class="shopping-cart__counter">| - 1 + |</span>
+                                    <span class="shopping-cart__price">3999 ₽</span>
+                                </div>
+                            </li>
+                        </template>
+                        <ul class="shopping-cart__list"></ul>
+                        <ul class="shopping-cart__total">
+                            <li>Итого:</li>
+                            <li>5 шт.</li>
+                            <li>19 995 ₽</li>
+                        </ul>
+                    </div>
+                    <button class="shopping-cart__button button">Оформить Заказ</button>
+                </div>
             </div>
+            <button class="main-nav__button burger-button burger-button--showed">
+                <img src="img/burger-button.svg" alt="Иконка бургер">
+            </button>
         </div>
     </header>
     <main class="main">
@@ -121,50 +148,28 @@
                     <button class="button best-selling__gender best-selling__gender--man">Мужские</button>
                     <button class="button best-selling__gender best-selling__gender--woman">Женские</button>
                 </div>
-                <div class="best-selling__items">
-                    <div class="best-selling__item  best-selling__item--1-3 product product--big product--hot product--big">	
-                        <img class="product__image" src="img/slick-formal-sneaker-shoe.png" alt="slick-formal-sneaker-shoe">
-                        <h3 class="product__title">Slick formal sneaker<br>shoe</h3>
-                        <div class="product__price">
-                            <span class="product__price product__price--new">2 999 ₽ </span>
-                            <span class="product__price product__price--old">4999 ₽</span>
-                        </div>
-                        <div class="product__button">
-                            <div class="product__circle"></div>
-                            <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon">
-                        </div>
-                    </div>
-                    <div class="best-selling__item product product--new">
-                        <img class="product__image" src="img/slick-sneaker-shoe.png" alt="slick-sneaker-shoe">
-                        <h3 class="product__title">Slick sneaker shoe</h3>
-                        <div class="product__price">
-                            <span class="product__price product__price--new">2 999 ₽ </span>
-                            <span class="product__price product__price--old">3999 ₽</span>
-                        </div>
-                        <div class="product__button">
-                            <div class="product__circle"></div>
-                            <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon">
-                        </div>
-                    </div>
-                    <div class="best-selling__item product">
-                        <img class="product__image" src="img/slick-canvas-shoe.png" alt="slick-canvas-shoe">
-                        <div class="product__info">
-                            <h3 class="product__title">Slick canvas shoe</h3>
-                            <div class="product__price">
-                                <span class="product__price product__price--new">2 999 ₽ </span>
-                                <span class="product__price product__price--old">3999 ₽</span>
-                            </div>
-                            <div class="product__button">
-                                <div class="product__circle"></div>
-                                <img class="product__arrow" src="img/arrow-icon.svg" alt="arrow-icon.">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <template id="product-list__exam">
+					<div class="product-list__card">
+						<a class="product-list__link" href=""></a>
+						<!-- product-list__card--big product-list__label product-list__label--hot product-list__label--big -->
+						<!-- --big на разрешении от 768px-->
+						<!-- best-selling__product-wrapper--1-3-->
+						<img class="product-list__image" src="img/slick-formal-sneaker-shoe.png" alt="">
+						<h3 class="product-list__title">Slick formal sneaker<br> shoe</h3>
+						<div class="product-list__price">
+							<span class="product-list__price product-list__price--new">2 999 ₽ </span>
+							<span class="product-list__price product-list__price--old">4999 ₽</span>
+						</div>
+						<button class="product-list__button">
+							<img class="product-list__arrow" src="img/arrow-icon.svg" alt="кнопка-со-стрелкой">
+						</button>
+					</div>
+				</template>
+				<div class="best-selling__product-wrapper product-list"></div>
                 <button class="best-selling__button button">Показать Всё</button>
             </div>
         </section>
     </main>
-    <script src="js/script.js"></script>
+    <script src="js/main.js" type="module" defer></script>
 </body>
 </html>

@@ -177,7 +177,7 @@
                 position: absolute;
                 width: calc(50vw + 7%);
                 bottom: 0;
-                top: -100px;
+                top: -15px;
                 left: 43%;
                 background-image:
                 url("../img/ultimate-vertical.svg");
@@ -196,12 +196,13 @@
         @media (min-width: 768px) {
             width: 504px;
             height: 305px;
-            
+			margin-left: 50px;
         }
 
         @media (min-width: 1728px) {
             width: 783px;
             height: 474px;
+			margin-left: 50px;
         
         }
     }

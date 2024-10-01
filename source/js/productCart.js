@@ -24,5 +24,6 @@ export const addProductToCart = (product) => {
     node.querySelector('.shopping-cart__name').textContent = product.title;
     node.querySelector('.shopping-cart__price').textContent = `${product.priceNew} ₽`;
 
+
     cartList.append(node);
 };

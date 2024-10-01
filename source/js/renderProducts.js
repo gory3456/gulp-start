@@ -1,7 +1,5 @@
 import { addProductToCart } from './productCart.js';
 
-
-
 export default (products, template, target, isTargetList = false, templateClass = '') => {
     const fragment = document.createDocumentFragment();
 
@@ -40,7 +38,7 @@ export default (products, template, target, isTargetList = false, templateClass 
         titleEl.textContent = title;
         priceNewEl.textContent = `${priceNew} ₽`;
         priceOldEl.textContent = `${priceOld} ₽`;
-        
+
 
         // Определение величины карточки и лейбла (Hot! / New)
 
@@ -80,4 +78,4 @@ export default (products, template, target, isTargetList = false, templateClass 
 
     target.innerHTML = '';
     target.append(fragment);
-}
+

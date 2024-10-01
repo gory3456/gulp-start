@@ -1,3 +1,4 @@
+
 // export const getStorage = (storageName) => {
 //     return JSON.parse(localStorage.getItem(storageName));
 // };
@@ -32,3 +33,4 @@
 
 //     localStorage.setItem(storageName, JSON.stringify(storageData));
 // };
+
