@@ -85,7 +85,29 @@
 		@media (max-width: 768px) {
 			display: none;
 
-
+			&--showed {
+				@media (max-width: 767px) {
+					display: flex;
+					flex-direction: column;
+					padding: 15px 10px 20px 20px;
+					position: fixed;
+					top: 0;
+					right: 0;
+					z-index: 100;
+					width: 50%;
+					height: 100vh;
+					background-color: #EBEBEB;
+					box-shadow: 0 47px 40px 0 rgba(0, 0, 0, 0.07);
+					z-index: 3;
+			
+					#{$mn}__button--close {
+						display: block;
+					}
+			
+				}
+				
+			}
+		}
     }
     &__item {
         
@@ -140,9 +162,7 @@
         &--showed {
             position: fixed;
             top: 17px;
-
-            right: 35px;
-
+            right: 57px;
             z-index: 101;
             
         }
