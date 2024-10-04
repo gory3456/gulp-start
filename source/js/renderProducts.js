@@ -22,22 +22,22 @@ export default (products, template, target, isTargetList = false, templateClass 
         const itemEl = productEl.cloneNode(true);
         const linkEl = itemEl.querySelector('.product-list__link');
         const imageEl = itemEl.querySelector('.product-list__image');
-        const titleEl = itemEl.querySelector('.product-list__title');
-        const priceNewEl = itemEl.querySelector('.product-list__price.product-list__price--new');
-        const priceOldEl = itemEl.querySelector('.product-list__price.product-list__price--old');
+        const nameEl = itemEl.querySelector('.product-list__title');
+        const priceEl = itemEl.querySelector('.product-list__price.product-list__price--new');
+        const oldPriceEl = itemEl.querySelector('.product-list__price.product-list__price--old');
         const buttonEl = itemEl.querySelector('.product-list__button');
         const arrowImgEl = itemEl.querySelector('.product-list__arrow');
         const modal = document.querySelector('.slick-notification');
         const modalClosed = document.querySelector('.slick-notification__close')
         const modalContinue = document.querySelector('.slick-notification__accept.button');
-        const { id, link, image, title, priceNew, priceOld } = product;
+        const { id, link, image, name, price, oldPrice } = product;
 
         itemEl.dataset.productId = id;
         linkEl.href = link;
         imageEl.src = image;
-        titleEl.textContent = title;
-        priceNewEl.textContent = `${priceNew} ₽`;
-        priceOldEl.textContent = `${priceOld} ₽`;
+        nameEl.textContent = name;
+        priceEl.textContent = `${price} ₽`;
+        oldPriceEl.textContent = `${oldPrice} ₽`;
         buttonEl.className = 'product-list__button';
         buttonEl.appendChild(arrowImgEl);
 

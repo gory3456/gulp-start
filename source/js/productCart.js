@@ -21,8 +21,8 @@ export const addProductToCart = (product) => {
 
     node.dataset.productId = product.id;
     node.querySelector('.shopping-cart__image').src = product.image;
-    node.querySelector('.shopping-cart__name').textContent = product.title;
-    node.querySelector('.shopping-cart__price').textContent = `${product.priceNew} ₽`;
+    node.querySelector('.shopping-cart__name').textContent = product.name;
+    node.querySelector('.shopping-cart__price').textContent = `${product.price} ₽`;
 
     // node.querySelector('.shopping-cart__delete').addEventListener('click', (event) => {
     //     removeProductFromCart(product.id);
