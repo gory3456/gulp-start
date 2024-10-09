@@ -69,6 +69,7 @@ export default (products, template, target, isTargetList = false, templateClass 
         buttonEl.addEventListener('click', () => {
             modal.classList.add('slick-notification--showed');
             addProductToCart(product,true);
+
         });
 
         const closeModal = () => {
