@@ -55,9 +55,37 @@
         border-bottom: 2px solid #DEDEDE;
     }
 
+	&__delete {
+		@include clear-button;
+
+		background-color: transparent;
+		border: none;
+		color: #000;
+		padding: 10px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		margin-right: 10px;
+		margin-left: 10px;
+
+	
+
+        &::before {
+            content: '-';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+			color: #DC4B54;
+        }
+	}
+
     &__sneaker-info {
         display: flex;
         align-items: center;
+		width: 100%;
     }
 
     &__sneaker-total {
