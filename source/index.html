@@ -18,6 +18,27 @@
             <div class="slick-notification__window"></div>
         </div>
     </div>
+	<div class="status-order">
+		<div class="status-order__active">
+			<button class="status-order__close">
+				<img class="status-order__image" src="img/close.svg">
+			</button>
+			<h2 class="status-order__title">Ошибка!</h2>
+			<p class="status-order__text">Что-то пошло не так. Мы уже знаем<br> о проблеме. Зайдите позже.</p>
+			<button class="status-order__accept black-button">Продолжить покупки</button>
+			<div class="status-order__window"></div>
+		</div>
+	</div>
+	<div class="status-order">
+		<div class="status-order__active">
+			<button class="status-order__close">
+				<img class="status-order__image" src="img/close.svg">
+			</button>
+			<p class="status-order__text">Заказ оформлен.<br> Ожидайте звонка</p>
+			<button class="status-order__accept button">Вернуться на главную</button>
+			<div class="status-order__window"></div>
+		</div>
+	</div>
     <header class="main-nav">
         <div class="container main-nav__container">
             <a class="main-nav__logo">
@@ -72,25 +93,28 @@
                         <span class="shopping-cart__title">Корзина Товаров</span>
                         <template class="shopping-cart__product">
                             <li class="shopping-cart__item">
-								<button class="shopping-cart__delete"></button>
                                 <div class="shopping-cart__sneaker-info">
                                     <img class="shopping-cart__image" src="img/gray_running_sport_shoe.png" alt="серые_беговые_кроссовки">
                                     <span class="shopping-cart__name">Running sport shoe</span>
                                 </div>
                                 <div class="shopping-cart__sneaker-total">
-                                    <span class="shopping-cart__counter">| - 1 + |</span>
-                                    <span class="shopping-cart__price">3999 ₽</span>
+                                    <div class="shopping-cart__wrapper">
+										<button class="shopping-cart__count-button shopping-cart__count-button--minus">-</button>
+										<input type="text" name="shopping-cart-counter" class="shopping-cart__counter" placeholder="0">
+										<button class="shopping-cart__count-button shopping-cart__count-button--plus">+</button>
+									</div>
+									<span class="shopping-cart__price">3999</span>
                                 </div>
                             </li>
                         </template>
                         <ul class="shopping-cart__list"></ul>
                         <ul class="shopping-cart__total">
                             <li>Итого:</li>
-                            <li>5 шт.</li>
-                            <li>19 995 ₽</li>
+                            <li class="shopping-cart__total-quantity"><span>0</span> шт.</li>
+							<li class="shopping-cart__total-price">0</li>
                         </ul>
                     </div>
-                    <button class="shopping-cart__button button">Оформить Заказ</button>
+                    <button class="shopping-cart__order-button button" id="#order-button">Оформить Заказ</button>
                 </div>
             </div>
             <button class="main-nav__button burger-button burger-button--showed">

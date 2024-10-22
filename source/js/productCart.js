@@ -1,3 +1,4 @@
+import formatPrice from './formatPrice.js';
 import { addToStorage, removeFromStorage, getStorage } from './localstorage.js';
 
 const buttonOpened = document.querySelector('.main-nav__button.main-nav__button--purchases');
@@ -7,7 +8,7 @@ const buttonClosed = document.querySelector('.shopping-cart__close');
 const cart = document.querySelector('.shopping-cart');
 const cartList = document.querySelector('.shopping-cart__list');
 const cartProductTemplate = document.querySelector('.shopping-cart__product').content;
-const cartCount = buttonOpened.querySelector('.main-nav__pin');
+export const cartCount = buttonOpened.querySelector('.main-nav__pin');
 
 buttonOpened.addEventListener('click', () => {
     shoppingCart.classList.add('shopping-cart--active');
@@ -36,12 +37,7 @@ export const addProductToCart = (product ,isClick  = false) => {
     node.dataset.productId = product.id;
     node.querySelector('.shopping-cart__image').src = product.image;
     node.querySelector('.shopping-cart__name').textContent = product.name;
-    node.querySelector('.shopping-cart__price').textContent = `${product.price} ₽`;
-
-	node.querySelector('.shopping-cart__delete').addEventListener('click', (event) => {
-        removeProductFromCart(product.id);
-        event.stopPropagation();
-    });
+	node.querySelector('.shopping-cart__price').textContent = formatPrice(product.price);
 
 	if (isClick) {
         addToStorage('cart', product);
