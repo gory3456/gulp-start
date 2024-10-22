@@ -121,13 +121,10 @@
 
     &__counter {
         font-size: 21px;
-
-        @media (min-width:768px) {
-            font-size: 21px;
-            margin-left: 33px;
-            margin-right: 72px;
-            white-space: nowrap;
-        }
+		border: none;
+        width: 30px;
+		text-align: center;
+        
     }
 
     &__price {
@@ -171,7 +168,7 @@
         }
     }
 
-    &__button {
+    &__order-button {
         @include clear-button;
         
         width: 260px;
@@ -186,5 +183,26 @@
             font-size: 24px;
             margin-left: auto;		
         }
+    }
+	&__partition {
+        margin: 0 10px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__wrapper::after,
+    &__wrapper::before {
+        content: '|';
+        margin: 0 10px;
+    }
+
+    &__count-button {
+        @include clear-button;
+        font-size: 21px;
+        padding: 0 10px;
+
     }
 }
