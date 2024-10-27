@@ -1,0 +1,23 @@
+.pagination {
+    @include clear-list;
+    display: flex;
+    position: absolute;
+    z-index: 4;
+    width: auto !important;
+    left: auto !important;
+    top: auto !important;
+
+    &__item {
+        border-radius: 50%;
+        width: 11px;
+        height: 11px;
+        background-color: #000;
+        margin: 0 10px;
+        transition: width 0.3s;
+    }
+
+    &__item--active {
+        width: 30px;
+        border-radius: 12px;
+    }
+}

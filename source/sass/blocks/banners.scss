@@ -1,0 +1,204 @@
+.banners {
+    margin-top: 50px;
+
+    @media (min-width: 768px) {
+        margin-top: 100px;
+    }
+
+    @media (min-width: 1728px) {
+        margin-top: 216px;
+    }
+
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+        padding-top: 112px;
+        margin-top: -112px;
+        margin-right: -10px;
+        margin-left: -10px;
+
+        @media (min-width: 768px) {
+            margin-right: -20px;
+            margin-left: -20px;
+        }
+    }
+
+    &__list {
+        @include clear-list;
+    }
+
+    &__bg {
+        position: relative;
+        display: flex;
+        position: relative;
+        background-color: #DC4B54;
+        z-index: 1;
+        justify-content: center;
+
+        &--green {
+            background-color: rgb(0, 181, 0);
+        }
+
+        &--blue {
+            background-color: rgb(44, 191, 254);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/slick-word-banner.png');
+            background-repeat: no-repeat, no-repeat;
+            background-size: 100% auto;
+            width: 309px;
+            height: 109px;
+            position: absolute;
+            background-repeat: no-repeat;
+            bottom: -10px;
+            z-index: 2;
+			left: 0px;
+        }
+
+		@media (max-width: 768px) {
+			width: 322px;
+			height: 361px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+        @media (min-width: 768px) {
+            &::after {
+                width: 710px;
+                height: 230px;
+                bottom: 0;
+            }
+        }
+
+        @media (min-width: 1728px) {
+            border-radius: 20px;
+
+            &::after {
+                width: 978px;
+                height: 316px;
+            }
+        }
+    }
+
+    &__image {
+        display: none;
+        z-index: 3;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__image-legs {
+        @media (max-width: 768px) {
+            position: absolute;
+            bottom: 0;
+            left: -60px;
+            width: 500px;
+            height: 500px;
+        }
+
+        @media (min-width: 1728px) {
+            position: relative;
+            width: 803px;
+            height: 803px;
+            margin-top: -238px;
+        }
+    }
+
+    &__info {
+        @media (max-width: 1727px) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        color: #FFFFFF;
+        margin: 0;
+        margin-top: 40px;
+
+        @media (min-width: 768px) {
+            font-size: 58px;
+        }
+
+        @media (min-width: 1728px) {
+            margin-top: 88px;
+        }
+    }
+
+    &__button {
+        background-color: #FFFFFF;
+        color: #DC4B54;
+        width: 100%;
+        height: 66px;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 30px 0;
+
+        @media (min-width: 768px) {
+            width: 219px;
+            height: 66px;
+            font-size: 28px;
+            margin: 80px 0 30px;
+        }
+
+        @media (min-width: 1728px) {
+            margin: 30px 0;
+        }
+    }
+
+    &__product-list {
+        @include clear-list;
+        display: flex;
+
+        @media (min-width:768px) {
+            justify-content: center;
+        }
+
+        @media (min-width: 1728px) {
+            justify-content: start;
+        }
+    }
+
+    &__product-items {
+        position: relative;
+        width: 71px;
+        height: 71px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        margin: 0 15px 60px;
+
+        @media (min-width: 768px) {
+            margin: 0 15px 150px;
+        }
+
+        @media (min-width: 1728px) {
+            margin: 0 20px 120px;
+        }
+    }
+
+    &__product-items img {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 110px;
+        height: 110px;
+    }
+
+    &__numbering {
+        bottom: 20px !important;
+        right: calc(50% - 56px) !important;
+
+        .pagination__item {
+            background-color: #fff;
+        }
+
+        @media (min-width: 768px) {
+            right: 40px !important;
+        }
+    }
+}

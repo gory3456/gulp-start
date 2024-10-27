@@ -1,7 +1,9 @@
-import renderProducts from './renderProducts.js';
 import './script.js';
 import './productCart.js';
 import { fetchParams } from './fetchParams.js';
+import './sliders.js';
+import renderProducts from './renderProducts.js';
+
 
 const catalogList = document.querySelector('.best-selling__product-wrapper.product-list');
 const catalogItemTemplate = document.querySelector('#product-list__exam').content;

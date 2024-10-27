@@ -1,0 +1,146 @@
+.most-popular {
+    margin-top: 57px;
+
+    @media (min-width: 768px) {
+        margin-top: 66px;
+    }
+
+    @media (min-width: 1728px) {
+        margin-top: 132px;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__info {
+        color: #000;
+        width: 290px;
+    }
+
+    &__today {
+        font-size: 24px;
+
+        &::before {
+            content: '';
+            width: 47px;
+            height: 2px;
+            background-color: hsl(0, 0%, 0%);
+            display: inline-block;
+            vertical-align: middle;
+            transform: translateY(-2px);
+            margin-right: 22px;
+        }
+    }
+
+    &__title {
+        font-size: 45px;
+        margin: 15px 0 25px 0;
+    }
+
+    &__desc {
+        font-size: 18px;
+        margin: 0 0 25px 0;
+    }
+
+    &__button {
+        font-size: 28px;
+        width: 100%;
+        height: 77px;
+    }
+
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+        width: 310px;
+        margin-left: -5px;
+        margin-right: -5px;
+
+        @media (min-width: 768px) {
+            margin-left: 70px;
+            margin-right: 0;
+        }
+
+        @media (min-width: 1728px) {
+            width: 1140px;
+            margin-left: 70px;
+        }
+    }
+
+    &__list {
+        padding: 0;
+    }
+
+    &__item {
+        background-color: rgba(217, 217, 217, 0.15);
+        max-width: 310px;
+        padding: 30px 36px;
+
+        @media (min-width: 1728px) {
+            margin: 0 35px;
+        }
+    }
+
+    &__item-image {
+        width: 225px;
+        height: 225px;
+        margin-top: -30px;
+		
+    }
+
+    &__item-title {
+        font-size: 21px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    &__item-price {
+        font-size: 24px;
+    }
+
+    &__item-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 30px;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+
+        img {
+            display: block;
+        }
+    }
+
+    &__item-arrow {
+        width: 17px;
+        height: 17px;
+    }
+
+    &__numbering {
+        bottom: -20px !important;
+        right: calc(50% - 70px) !important;
+
+        @media (min-width: 768px) {
+            right: calc(50% - 110px) !important;
+        }
+
+        @media (min-width: 1728px) {
+            bottom: -60px !important;
+        }
+    }
+}
