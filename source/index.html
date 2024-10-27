@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slick</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -25,7 +26,7 @@
 			</button>
 			<h2 class="status-order__title">Ошибка!</h2>
 			<p class="status-order__text">Что-то пошло не так. Мы уже знаем<br> о проблеме. Зайдите позже.</p>
-			<button class="status-order__accept black-button">Продолжить покупки</button>
+			<button class="status-order__accept button">Продолжить покупки</button>
 			<div class="status-order__window"></div>
 		</div>
 	</div>
@@ -166,6 +167,173 @@
                 </li>
             </ul>
         </section>
+		<section class="most-popular">
+			<div class="container">
+				<div class="most-popular__main">
+					<div class="most-popular__info">
+						<span class="most-popular__today">Сегодня в тренде</span>
+						<h2 class="most-popular__title">Самые<br>популярные</h2>
+						<p class="most-popular__desc">Посмотрите, что чаще всего<br> покупают у нас</p>
+						<button class="most-popular__button button">Показать все</button>
+					</div>
+					<div class="most-popular__wrapper">
+						<div class="arrow">
+						<button class="arrow__most-popular arrow__most-popular--right">
+							<img src="img/most-popular-arrow-right.svg" alt="">
+						</button>
+						<button class="arrow__most-popular arrow__most-popular--left">
+							<img src="img/most-popular-arrow-left.svg" alt="">
+						</button>
+					</div>
+					<ul class="pagination most-popular__numbering">
+						<li class="pagination__item"></li>
+						<li class="pagination__item pagination__item--active"></li>
+						<li class="pagination__item"></li>
+					</ul>
+					<div class="most-popular__swiper">
+						<ul class="most-popular__list product-list swiper-wrapper">
+							<li class="most-popular__item product-list__card swiper-slide">
+								<a class="most-popular__item-link product-list__link" href=""></a>
+								<img class="most-popular__item-image" src="img/most-popular-black.png" alt="">
+								<h3 class="most-popular__item-title">Running sport shoe</h3>
+								<div class="most-popular__item-price">
+									<span>2 999 ₽ </span>
+								</div>
+								<button class="most-popular__item-button product-list__button">
+									<img class="most-popular__item-arrow" src="img/arrow-icon.svg" alt="">
+								</button>
+							</li>
+							<li class="most-popular__item product-list__card swiper-slide">
+								<a class="most-popular__item-link product-list__link" href=""></a>
+								<img class="most-popular__item-image" src="img/banner-sneaker-2.png" alt="">
+								<h3 class="most-popular__item-title">Running sport shoe</h3>
+								<div class="most-popular__item-price">
+									<span>2 999 ₽ </span>
+								</div>
+								<button class="most-popular__item-button product-list__button">
+									<img class="most-popular__item-arrow" src="img/arrow-icon.svg" alt="">
+								</button>
+							</li>
+							<li class="most-popular__item product-list__card swiper-slide">
+								<a class="most-popular__item-link product-list__link" href=""></a>
+								<img class="most-popular__item-image" src="img/banner-sneaker-1.png" alt="">
+								<h3 class="most-popular__item-title">Running sport shoe</h3>
+								<div class="most-popular__item-price">
+									<span>2 999 ₽ </span>
+								</div>
+								<button class="most-popular__item-button product-list__button">
+									<img class="most-popular__item-arrow" src="img/arrow-icon.svg" alt="">
+								</button>
+							</li>
+							<li class="most-popular__item product-list__card swiper-slide">
+								<a class="most-popular__item-link product-list__link" href=""></a>
+								<img class="most-popular__item-image" src="img/banner-sneaker-3.png" alt="">
+								<h3 class="most-popular__item-title">Running sport shoe</h3>
+								<div class="most-popular__item-price">
+									<span>2 999 ₽ </span>
+								</div>
+								<button class="most-popular__item-button product-list__button">
+									<img class="most-popular__item-arrow" src="img/arrow-icon.svg" alt="">
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<section class="banners">
+		<div class="container">
+			<div class="banners__swiper">
+				<div class="arrow">
+					<button class="arrow__banners arrow__banners--right">
+						<img src="img/icon-arrow-right.svg" alt="">
+					</button>
+					<button class="arrow__banners arrow__banners--left">
+						<img src="img/icon-arrow-left.svg" alt="">
+					</button>
+				</div>
+				<ul class="pagination banners__numbering">
+					<li class="pagination__item"></li>
+					<li class="pagination__item pagination__item--active"></li>
+					<li class="pagination__item"></li>
+				</ul>
+				<ul class="banners__list swiper-wrapper">
+					<li class="banners__item swiper-slide">
+						<div class="banners__container">
+							<div class="banners__bg">
+								<div class="banners__image">
+									<img class="banners__image-legs" src="img/shoe-legs-banner.png" alt="Кроссовски на ногах">
+								</div>
+								<div class="banners__info">
+									<p class="banners__title">Ты готов<br> проложить свой путь?</p>
+									<button class="banners__button button">См Все</button>
+									<ul class="banners__product-list">
+										<li class="banners__product-items">
+											<img src="img/banner-sneaker-1.png" alt="">
+										</li>
+										<li class="banners__product-items">
+											<img src="img/banner-sneaker-2.png" alt="">
+										</li>
+										<li class="banners__product-items">
+											<img src="img/banner-sneaker-3.png" alt="">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="banners__item swiper-slide">
+						<div class="banners__bg banners__bg--green">
+							<div class="banners__image">
+								<img class="banners__image-legs" src="img/shoe-legs-banner.png" alt="Кроссовски на ногах">
+							</div>
+							<div class="banners__info">
+								<p class="banners__title">Ты готов<br> проложить свой путь?</p>
+								<button class="banners__button button">См Все</button>
+								<ul class="banners__product-list">
+									<li class="banners__product-items">
+										<img src="img/banner-sneaker-1.png" alt="">
+									</li>
+									<li class="banners__product-items">
+										<img src="img/banner-sneaker-2.png" alt="">
+									</li>
+									<li class="banners__product-items">
+										<img src="img/banner-sneaker-3.png" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="banners__item swiper-slide">
+						<div class="banners__container">
+							<div class="banners__bg banners__bg--blue">
+								<div class="banners__image">
+									<img class="banners__image-legs" src="img/shoe-legs-banner.png" alt="Кроссовски на ногах">
+								</div>
+								<div class="banners__info">
+								<p class="banners__title">Ты готов<br> проложить свой путь?</p>
+								<button class="banners__button button">См Все</button>
+									<ul class="banners__product-list">
+										<li class="banners__product-items">
+											<img src="img/banner-sneaker-1.png" alt="">
+										</li>
+										<li class="banners__product-items">
+											<img src="img/banner-sneaker-2.png" alt="">
+										</li>
+										<li class="banners__product-items">
+											<img src="img/banner-sneaker-3.png" alt="">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</section>
         <section class="best-selling">
             <div class="best-selling__container container">
                 <h2 class="best-selling__headline headline">Best Selling</h2>

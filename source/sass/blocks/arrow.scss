@@ -1,0 +1,79 @@
+.arrow {
+    &__most-popular {
+        @include clear-button;
+        display: block;
+        width: 7px;
+        height: 5px;
+        bottom: 0;
+        position: absolute;
+        cursor: pointer;
+        z-index: 3;
+
+        @media (min-width: 768px) {
+            width: 15px;
+            height: 27px;
+        }
+
+        &--left {
+            left: 90px;
+            bottom: 15px;
+
+            @media (min-width: 768px) {
+                bottom: 50%;
+                left: 35px;
+            }
+
+            @media (min-width: 1728px) {
+                left: 40px;
+            }
+        }
+
+        &--right {
+            right: 90px;
+            bottom: -5px;
+
+            @media (min-width: 768px) {
+                bottom: 50%;
+                right: -35px;
+            }
+
+            @media (min-width: 1728px) {
+                right: -30px;
+            }
+        }
+
+        img {
+            width: 7px;
+            height: 5px;
+
+            @media (min-width: 768px) {
+                width: 15px;
+                height: 27px;
+            }
+        }
+    }
+
+    &__banners {
+        display: none;
+
+        @media (min-width: 768px) {
+            @include clear-button;
+            display: block;
+            color: #fff;
+            width: 19px;
+            height: 11px;
+            top: 59%;
+            position: absolute;
+            cursor: pointer;
+            z-index: 3;
+
+            &--right {
+                right: 26px;
+            }
+
+            &--left {
+                left: 26px;
+            }
+        }
+    }
+}
