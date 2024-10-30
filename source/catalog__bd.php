@@ -1,4 +1,4 @@
-<pre>
+
 <?php
 //Сделал возможность поиска по status, priceTo, oldPrice
 //Уссловие для name чтобы строка была равна formal (покажет 1 элемент)
@@ -60,4 +60,3 @@ echo $my_data;
 
 $conn->close();
 ?>
-</pre>

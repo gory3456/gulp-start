@@ -1,20 +1,14 @@
-// const modal = document.querySelector('.slick-notification');
-// const modalClosed = document.querySelector('.slick-notification__close')
-// const modalContinue = document.querySelector('.slick-notification__accept');
-// const modalOpen = document.querySelectorAll('.product__button');
+export default class {
+    constructor(modalElement, activeClass) {
+        this.modalEl = modalElement;
+        this.activeClass = activeClass;
+    }
 
-// modalOpen.forEach((button) => {
-//     button.addEventListener('click', () => {
-//         modal.classList.add('slick-notification--showed');
-//         modalClosed.addEventListener('click', closeModal);
-//         modalContinue.addEventListener('click', closeModal);
-//     })
-// })
+    openModal() {
+        this.modalEl?.classList.add(this.activeClass);
+    }
 
-// const closeModal = () => {
-//     modal.classList.remove('slick-notification--showed');
-//     modalClosed.removeEventListener('click', closeModal);
-//     modalContinue.removeEventListener('click', closeModal);
-// }
-
-
+    closeModal() {
+        this.modalEl?.classList.remove(this.activeClass);
+    }
+}

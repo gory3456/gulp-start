@@ -1,5 +1,6 @@
 import formatPrice from './formatPrice.js';
 import { addToStorage, removeFromStorage, getStorage } from './localstorage.js';
+import Modal from './modal.js';
 
 const buttonOpened = document.querySelector('.main-nav__button.main-nav__button--purchases');
 const shoppingCart = document.querySelector('.shopping-cart');
@@ -11,14 +12,16 @@ const cartProductTemplate = document.querySelector('.shopping-cart__product').co
 export const cartCount = buttonOpened.querySelector('.main-nav__pin');
 
 buttonOpened.addEventListener('click', () => {
-    shoppingCart.classList.add('shopping-cart--active');
-    buttonClosed.addEventListener('click', closeShoppingCart);
+	const openShop = new Modal(shoppingCart, 'shopping-cart--active');
+    openShop.openModal();
+    buttonClosed.addEventListener('click', buttonClosed);
 });
 
-const closeShoppingCart = () => {
-    shoppingCart.classList.remove('shopping-cart--active');
-    buttonClosed.removeEventListener('click', closeShoppingCart);
-};
+buttonClosed.addEventListener('click', () => {
+    const openShop = new Modal(shoppingCart, 'shopping-cart--active');
+    openShop.closeModal();
+    buttonClosed.removeEventListener('click', buttonClosed);
+});
 
 const removeProductFromCart = (productId) => {
     const node = cartList.querySelector(`[data-product-id="${productId}"]`);
@@ -50,12 +53,14 @@ export const addProductToCart = (product ,isClick  = false) => {
 if (getStorage('cart')?.length) {
     getStorage('cart').forEach(product => {
         addProductToCart(product);
+		cartCount.textContent = getStorage('cart').length;
+
     });
-    cartCount.textContent = getStorage('cart').length;
 }
 
 document.addEventListener('click', (event) => {
     if (!shoppingCart.contains(event.target) && !buttonOpened.contains(event.target)) {
-        closeShoppingCart();
+        const openShop = new Modal(shoppingCart, 'shopping-cart--active');
+        openShop.closeModal();
     }
 });
