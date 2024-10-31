@@ -1,9 +1,10 @@
-import { addToStorage, getStorage, removeFromStorage } from "./localstorage.js";
 import { cartCount } from "./productCart.js";
 import { createOrder } from "./fetchParams.js";
 import formatPrice from "./formatPrice.js";
+import LocalStorage from "./localstorage.js";
 
 const orderButton = document.querySelector('.shopping-cart__order-button.button');
+export const cartStorage = new LocalStorage('cart');
 
 const calculateCountsData = (data) => {
     return data.reduce((acc, curr) => {
@@ -15,7 +16,7 @@ const calculateCountsData = (data) => {
 };
 
 orderButton.addEventListener('click', () => {
-    const data = getStorage('cart');
+    const data = cartStorage.getStorage('cart');
 
     const countsData = calculateCountsData(data);
 	console.log(countsData);
@@ -49,7 +50,7 @@ const editProductCount = (node, product, operation = 'plus') => {
 };
 
 export const renderCart = () => {
-    const data = getStorage('cart');
+    const data = cartStorage.getStorage('cart');
     if (!data?.length) {
         return;
     }
@@ -73,14 +74,14 @@ export const renderCart = () => {
 
         node.querySelector('.shopping-cart__count-button--minus').addEventListener('click', () => {
             if (node.querySelector('.shopping-cart__counter').value > 0) {
-                removeFromStorage('cart', product.id);
+                LocalStorage.removeFromStorage('cart', product.id);
 
                 editProductCount(node, product, 'minus');
             }
         })
 
         node.querySelector('.shopping-cart__count-button--plus').addEventListener('click', () => {
-            addToStorage('cart', product);
+            LocalStorage.addToStorage('cart', product);
 
             editProductCount(node, product, 'plus');
         })
