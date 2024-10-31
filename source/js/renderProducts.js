@@ -1,8 +1,9 @@
 import formatPrice from './formatPrice.js';
-import { addToStorage, getStorage } from './localstorage.js';
 import { cartCount } from './productCart.js';
 import { renderCart } from './renderCart.js';
 import Modal from './modal.js';
+import LocalStorage from './localstorage.js';
+const cartStorage = new LocalStorage('cart');
 
 export default (products, template, target, isTargetList = false, templateClass = '') => {
     const fragment = document.createDocumentFragment();
@@ -73,16 +74,17 @@ export default (products, template, target, isTargetList = false, templateClass 
         buttonEl.addEventListener('click', () => {
             const slickModal = new Modal(slickModalEl, 'slick-notification--showed');
             slickModal.openModal();
-            addToStorage('cart', product);
+            LocalStorage.addToStorage('cart', product);
             renderCart();
 
-            const itemData = getStorage('cart');
+            const itemData = cartStorage.getStorage('cart');
             cartCount.textContent = Number(itemData.length);
         });
 
         modalClosed.addEventListener('click', () => {
             const slickModal = new Modal(slickModalEl, 'slick-notification--showed');
             slickModal.closeModal();
+			Modal.closeAllModal();
         });
 
         modalContinue.addEventListener('click', () => {
@@ -90,7 +92,7 @@ export default (products, template, target, isTargetList = false, templateClass 
             slickModal.closeModal();
         });
 
-        cartCount.textContent = getStorage('cart')?.length || 0;
+        cartCount.textContent = cartStorage.getStorage('cart')?.length || 0;
 
         fragment.appendChild(itemEl);
     });

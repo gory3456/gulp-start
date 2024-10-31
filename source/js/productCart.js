@@ -1,6 +1,7 @@
 import formatPrice from './formatPrice.js';
-import { addToStorage, removeFromStorage, getStorage } from './localstorage.js';
+import LocalStorage from './localstorage.js';
 import Modal from './modal.js';
+export const cartStorage = new LocalStorage('cart');
 
 const buttonOpened = document.querySelector('.main-nav__button.main-nav__button--purchases');
 const shoppingCart = document.querySelector('.shopping-cart');
@@ -31,7 +32,7 @@ const removeProductFromCart = (productId) => {
     if (!cartList.childElementCount) {
         cart.classList.remove('shopping-cart--active');
     }
-    removeFromStorage('cart', productId);
+    LocalStorage.removeFromStorage('cart', productId);
 };
 
 export const addProductToCart = (product ,isClick  = false) => {
@@ -43,17 +44,17 @@ export const addProductToCart = (product ,isClick  = false) => {
 	node.querySelector('.shopping-cart__price').textContent = formatPrice(product.price);
 
 	if (isClick) {
-        addToStorage('cart', product);
-        cartCount.textContent = getStorage('cart')?.length;
+        LocalStorage.addToStorage('cart', product);
+        cartCount.textContent = cartStorage.getStorage('cart')?.length;
     }
 
     cartList.append(node);
 };
 
-if (getStorage('cart')?.length) {
-    getStorage('cart').forEach(product => {
+if (cartStorage.getStorage('cart')?.length) {
+    cartStorage.getStorage('cart').forEach(product => {
         addProductToCart(product);
-		cartCount.textContent = getStorage('cart').length;
+		cartCount.textContent = cartStorage.getStorage('cart').length;
 
     });
 }
